@@ -1,15 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <base-button></base-button>
+  <base-card></base-card>
+  <base-input></base-input>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BaseButton from './components/UI/BaseButton.vue'
+import BaseCard from './components/UI/BaseCard.vue'
+import BaseInput from './components/UI/BaseInput.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    BaseButton,
+    BaseCard,
+    BaseInput,
   }
 }
 </script>
