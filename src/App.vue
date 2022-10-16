@@ -1,31 +1,67 @@
 <template>
-  <div id="menu-btn" class="fas fa-bars"></div>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <base-button></base-button>
+  
+  <!-- <base-button></base-button>
   <base-card></base-card>
-  <base-input></base-input>
-
-  <div id="theme-toggler" class="fas fa-moon"></div>
+  <base-input></base-input> -->
+  <theme-toggler>
+    <template #body>
+      <navigation-section></navigation-section>
+      <!-- <menu-btn></menu-btn> -->
+      <hero-section></hero-section>
+      <skills-section></skills-section>
+      <portfolio-section></portfolio-section>
+      
+      <about-section></about-section>
+      <contact-section></contact-section>
+      <footer-section></footer-section>
+    </template>
+    </theme-toggler>
 </template>
 
 <script>
-import BaseButton from './components/UI/BaseButton.vue'
-import BaseCard from './components/UI/BaseCard.vue'
-import BaseInput from './components/UI/BaseInput.vue'
+// import BaseButton from './components/UI/BaseButton.vue'
+// import BaseCard from './components/UI/BaseCard.vue'
+// import BaseInput from './components/UI/BaseInput.vue'
+import ThemeToggler from './components/UI/ThemeToggler.vue'
+// import MenuBtn from './components/UI/MenuBtn.vue'
+import SkillsSection from './components/skills/SkillsSection.vue'
+import PortfolioSection from './components/portfolio/PortfolioSection.vue'
+import ContactSection from './components/contact/ContactSection.vue'
+import FooterSection from './components/footer/FooterSection.vue'
+import AboutSection from './components/about/AboutSection.vue'
+import HeroSection from './components/hero/HeroSection.vue'
+import NavigationSection from './components/nav/NavigationSection.vue'
+
 
 export default {
   name: 'App',
+  provide(){
+   return { darkMode:this.darkMode}
+  },
+  data(){
+    return {
+      darkMode:false,
+    }
+  },
   components: {
-    BaseButton,
-    BaseCard,
-    BaseInput,
+    // BaseButton,
+    // BaseCard,
+    // BaseInput,
+    ThemeToggler,
+    // MenuBtn,
+    SkillsSection,
+    PortfolioSection,
+    ContactSection,
+    FooterSection,
+    AboutSection,
+    HeroSection,
+    NavigationSection,
   }
 }
 </script>
 
 <style>
-
+/* def light mode values */
 :root{
     --green:#27ae60;
     --black:#444;
@@ -37,6 +73,8 @@ export default {
     --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
                       -.4rem -.4rem 1rem #fff inset;
 }
+
+
 
 *{
     font-family: 'Poppins', sans-serif;
@@ -54,62 +92,42 @@ html{
     scroll-behavior: smooth;
 }
 
+
+
 body{
-    background: var(--bg-color);
-    padding:0 12rem 0 12rem;
-    padding-left: 30rem;
-    margin:(100%-24px)
+    /* background: var(--bg-color); */
+    /* padding:0 12rem 0 12rem;
+    padding-left: 30rem; */
+    /* margin:(100%-24px) */
 }
+
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: var(--bg-color); 
+  min-height:100vh;
+  /* padding:0 12rem 0 12rem;
+    padding-left: 30rem; */
+    /* margin:(100%-24px)
+  
+    /* background: var(--bg-color); */
+  /* color: #2c3e50; */
+  /* margin-top: 60px; */
 }
 
-#theme-toggler{
-    position: fixed;
-    top:1.5rem; right: 2rem;
-    z-index: 1000;
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    border-radius: 50%;
-    font-size: 2rem;
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
+.heading{
     text-align: center;
+    font-size: 5rem;
     color:var(--black);
-    background: var(--bg-color);
+    text-transform: uppercase;
+    padding-bottom: 2rem;
 }
 
-#theme-toggler:hover{
+.heading span{
     color:var(--green);
-    box-shadow: var(--box-shadow-inset);
-}
-
-#menu-btn{
-    position: fixed;
-    top:1.5rem; left: 2rem;
-    z-index: 1000;
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    border-radius: 50%;
-    font-size: 2rem;
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
-    text-align: center;
-    color:var(--black);
-    background: var(--bg-color);
-    /* display: none; */
-}
-
-#menu-btn:hover{
-    color:var(--green);
-    box-shadow: var(--box-shadow-inset);
+    text-transform: uppercase;
 }
 </style>

@@ -1,7 +1,18 @@
 <template>
-            <input type="text" placeholder="your name" class="box">
+            <input class="box" />
 
 </template>
+
+<script>
+export default{
+    props:['modelValue'],
+    methods:{
+        passInput(){
+
+        }
+    },
+}
+</script>
 
 <style scoped>
 

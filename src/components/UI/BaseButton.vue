@@ -1,6 +1,17 @@
 <template>
-    <button class="btn"> Share</button>
+    <button class="btn" :type="type" :caption="caption"> 
+    <slot></slot>
+    </button>
 </template>
+
+<script>
+export default{
+    props:['type', 'caption'],
+    // computed
+    
+}
+</script>
+
 
 <style>
 .btn{
