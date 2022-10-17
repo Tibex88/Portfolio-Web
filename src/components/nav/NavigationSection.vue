@@ -1,9 +1,11 @@
 <template>
-    <div class="nav_page">
-        <menu-btn class="nav_menu"></menu-btn>
-        <base-nav class="nav_bar"></base-nav>
+    <div>
+        <div class="nav_page">
+            <menu-btn class="nav_menu"></menu-btn>
+            
+            <base-nav class="nav_bar"></base-nav>
+        </div>    
     </div>
-
 </template>
 
 <script>
@@ -19,10 +21,23 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
+
+.nav_bg{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    top:0%;
+    left:0%;
+    position: fixed;
+    background-color: var(--bg-color);
+}
 .nav_page{
-    padding:0 2rem 0 2rem;
-    /* position: flex;
+    /* padding:0 2rem 0 2rem; */
+    /* position: fixed; */
+    /*
     justify-content: center;
     align-items: center; */
     
@@ -47,7 +62,12 @@ export default {
     .nav_bar{
         /* position:sticky; */
         
-        /* position: fixed; */
+        /* when scrolled out of view */
+        /* position: fixed; 
+        transform:translateX(-50%);
+        left:50%;
+        bottom:2rem; */
+
         /* bottom: 3.5rem; */
         /* right: 2rem; */
 

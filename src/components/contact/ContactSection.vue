@@ -38,6 +38,7 @@ export default{
     },
     methods:{
         sendMessage(){
+            console.log(this.$el.querySelector("span").style.color );
             console.log("object");
             store.set("darkTheme",true)
             console.log(store.get("theme"))

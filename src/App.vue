@@ -130,4 +130,13 @@ body{
     color:var(--green);
     text-transform: uppercase;
 }
+
+.box{
+    /* padding:2rem; */
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    z-index: 0;
+    overflow:hidden;
+}
 </style>

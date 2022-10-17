@@ -1,8 +1,43 @@
 <template>
     
-    <div id="menu-btn" class="fas fa-bars"></div>
+    <div @click="log" id="menu-btn" class="fas fa-bars"></div>
 
 </template>
+
+<script>
+
+export default{
+    data(){
+        return {
+            observer:null
+        }
+    },
+    created() {
+    this.observer = new IntersectionObserver(
+      this.onElementObserved, 
+      {
+        root: this.$el,//add a querySelector()
+        threshold: 1.0,
+      }
+    );
+  },
+  mounted() {
+    this.observer.observe(this.$el);
+  },
+  methods: {
+    onElementObserved(entries) {
+        entries.forEach(entry => {
+    if(entry.intersectionRatio!=0 ){
+        // entry.target
+        console.log(entry.target)
+    //   video.pause(); isPaused = true;
+    }
+    // else if(isPaused) {video.play(); isPaused=false}
+  });
+    }
+  },
+}
+</script>
 
 <style>
 

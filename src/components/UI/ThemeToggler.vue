@@ -54,7 +54,7 @@ export default{
 }
 .window{
     min-height:100vh; 
-    padding:2rem;
+    /* padding:2rem; */
 }
 
 .light{
