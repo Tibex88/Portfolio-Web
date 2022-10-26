@@ -56,6 +56,9 @@
                         <li>
                             Heroku
                         </li>
+                        <li>
+                            Netlify
+                        </li>
                     </ul>
 
                 </div>

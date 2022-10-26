@@ -107,7 +107,9 @@ p{
   margin:1rem auto;
   width: 71%;
 }
-
+a:link,a:active,a:visited{
+  text-decoration: none;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

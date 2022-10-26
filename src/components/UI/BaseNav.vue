@@ -65,6 +65,10 @@ export default {
 .logo{
   /* border-radius: 50%; */
 }
+
+.btn{
+  padding: 1rem 1.5rem;
+}
 .links{
 	gap: 2rem;
 	display: flex;

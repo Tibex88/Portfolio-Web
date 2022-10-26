@@ -3,12 +3,23 @@
 <div class="portfolio">
     <div class="box-container">
         
-        <div class="box">
+        <div class="box" v-for="project in portfolio" :key="project.title">
+            <img :src="project.img" alt="">
+            <div class="content">
+                <h3>{{project.title}}</h3>
+                <span>{{project.description}}</span><br>
+                <span>{{project.techStack.toString()}}</span>
+                <a v-show="project.repo" :href="project.repo"><i class="fab fa-github"></i></a>
+                <a v-show="project.link" :href="project.link" ><i class="fas fa-link"></i></a>
+            </div>
+        </div>
+        
+        <!-- <div class="box">
             <img :src="portfolio[0].img" alt="">
             <div class="content">
                 <h3>Crowning Stories bot</h3>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fas fa-link"></i></a>
+                <a v-show="portfolio[0].repo" :href="portfolio[0].repo"><i class="fab fa-github"></i></a>
+                <a v-show="portfolio[0].link" :href="portfolio[0].link" ><i class="fas fa-link"></i></a>
             </div>
         </div>
         
@@ -28,18 +39,8 @@
                 <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fas fa-link"></i></a>
             </div>
-        </div>
-        
-        <div class="box">
-            <img :src="portfolio[0].img" alt="">
-            <div class="content">
-                <h3>Crowning Stories bot</h3>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fas fa-link"></i></a>
-            </div>
-        </div>
+        </div> -->
 
-    
     </div>
 </div>
 
