@@ -6,12 +6,11 @@
   <theme-toggler>
     <template #body>
       <navigation-section></navigation-section>
-      <!-- <menu-btn></menu-btn> -->
       <hero-section></hero-section>
+      <about-section></about-section>
       <skills-section></skills-section>
       <portfolio-section></portfolio-section>
       
-      <about-section></about-section>
       <contact-section></contact-section>
       <footer-section></footer-section>
     </template>
@@ -64,8 +63,11 @@ export default {
 /* def light mode values */
 :root{
     --green:#27ae60;
+    /* --green:#e32444; */
     --black:#444;
     --light-color:#777;
+    /* --light-color:#f6faff; */
+    
     --bg-color:#e6e6e6;
     --border:.1rem solid rgba(0,0,0,.2);
     --box-shadow:.4rem .4rem 1rem #ccc,
@@ -74,15 +76,13 @@ export default {
                       -.4rem -.4rem 1rem #fff inset;
 }
 
-
-
 *{
     font-family: 'Poppins', sans-serif;
     margin:0; padding:0;
     box-sizing: border-box;
     outline: none; border:none;
     text-decoration: none;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     transition: .2s linear;
 }
 
@@ -92,8 +92,6 @@ html{
     scroll-behavior: smooth;
 }
 
-
-
 body{
     /* background: var(--bg-color); */
     /* padding:0 12rem 0 12rem;
@@ -101,6 +99,14 @@ body{
     /* margin:(100%-24px) */
 }
 
+p{
+  font-size: 2rem;
+  color: var(--light-color);
+  line-height: 1.8;
+  padding: 1rem 0;
+  margin:1rem auto;
+  width: 71%;
+}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -132,7 +138,7 @@ body{
 }
 
 .box{
-    /* padding:2rem; */
+    padding:2rem;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
     position: relative;

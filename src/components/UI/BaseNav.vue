@@ -2,30 +2,24 @@
   <nav>
     <div class="box nav_bg">
       <div>
-        <ph3>Tibebe</ph3>
+        <base-button class="logo">T</base-button>
       </div>
-      <div>
+      <div class="links">
         <a class="btn" href="#">HOME</a>
-        <a class="btn" href="#">SKILLS</a>
-        <a class="btn" href="#">PORTFOLIO</a>
-        <a class="btn" href="#">ABOUT</a>
-        <a class="btn" href="#">CONTACT</a>
+        <a class="btn" href="#skills">SKILLS</a>
+        <a class="btn" href="#portfolio">PORTFOLIO</a>
+        <a class="btn" href="#about">ABOUT</a>
+        <a class="btn" href="#contact">CONTACT</a>
       </div>
   </div>
   </nav>
-
-  <!-- <nav-1>
-    <a class="btn" href="#">HOME</a>
-    <a class="btn" href="#">SKILLS</a>
-    <a class="btn" href="#">PORTFOLIO</a>
-    <a class="btn" href="#">ABOUT</a>
-    <a class="btn" href="#">CONTACT</a>
-  </nav-1> -->
   
 </template>
 
 <script>
+import BaseButton from './BaseButton.vue';
 export default {
+  components: { BaseButton },
   data(){
         return {
             observer:null
@@ -66,6 +60,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
+.logo{
+  /* border-radius: 50%; */
+}
+.links{
+	gap: 2rem;
+	display: flex;
+}
 </style>

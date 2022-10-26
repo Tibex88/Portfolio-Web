@@ -17,7 +17,6 @@ export default {
         MenuBtn,
         BaseNav,
     }
-
 }
 </script>
 
@@ -40,7 +39,6 @@ export default {
     /*
     justify-content: center;
     align-items: center; */
-    
 }
 
 
