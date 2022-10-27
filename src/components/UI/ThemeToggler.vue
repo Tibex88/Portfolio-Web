@@ -33,13 +33,18 @@ export default{
 <style>
 #theme-toggler{
     position: fixed;
-    bottom: 3.5rem;
-    right: 2rem;
+    /* bottom: 3.5rem;
+    border-radius: 50%;
+    right: 2rem; */
+/*  */
+    bottom: 50%;
+    right: 0rem;
+    border-radius: 50% 0% 0% 50%;
+/*  */
     z-index: 1000;
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
-    border-radius: 50%;
     font-size: 2rem;
     cursor: pointer;
     box-shadow: var(--box-shadow);

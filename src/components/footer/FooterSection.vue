@@ -3,7 +3,7 @@
 
         <div class="footer">
             <!-- <h2>Footer</h2> -->
-            <p class="">Designed by <span>Tibebe Solomon</span></p>
+            <p class="">Designed by <span></span></p>
             <!-- <p class="heading ">Designed by <span>Tibebe Solomon</span></p> -->
         </div>
 
@@ -13,6 +13,7 @@
 <style>
 
 .footer{
+    padding: 4rem;
     /* padding:60px 0 30px 0; */
     /* display: flex;
     justify-content: center;

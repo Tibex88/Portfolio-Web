@@ -10,25 +10,9 @@
 
                     <p>Languages I speak</p>
                     <ul>
-                        <li>
-                            VueJS
+                        <li v-for="skill in frontEnd" :key="skill">
+                            {{skill}}
                         </li>
-                        <li>
-                            TailWind
-                        </li>
-                        <li>
-                            Javascript
-                        </li>
-                        <li>
-                            SaSS 
-                        </li>
-                        <li>
-                            HTML
-                        </li>
-                        <li>
-                            CSS
-                        </li>
-
                     </ul>
                 </div>
                 
@@ -38,50 +22,45 @@
                     <p>I value simple,readable,efficient code that performs the task at hand</p>
                     <p>Languages I speak</p>
                     <ul>
-                        <li>
-                            NodeJS
-                        </li>
-                        <li>
-                            PHP
-                        </li>
-                        <li>
-                            EXPRESS 
-                        </li>
-                        <li>
-                            MongoDB
-                        </li>
-                        <li>
-                            MySQL
-                        </li>
-                        <li>
-                            Heroku
-                        </li>
-                        <li>
-                            Netlify
+                        <li v-for="skill in backEnd" :key="skill">
+                            {{skill}}
                         </li>
                     </ul>
 
                 </div>
-                
+
                 <div class="box">
                     <i class="fas fa-code"></i>
                     <h3>Other</h3>
-                    <p>Other things I dabble in</p>
+                    <p>Other things I Dabble in</p>
 
                     <ul>
-                        <li>
-                            AdobeXD
-                        </li>
-                        <li>
-                            photoshop
+                        <li v-for="skill in other" :key="skill">
+                            {{skill}}
                         </li>
                     </ul>
                 </div>
-            
             </div>
         </div>
 
 </template>
+
+<script>
+import {frontEnd,backEnd,other} from  '@/assets/data';
+
+export default{
+    data(){
+        return {
+            frontEnd,
+            backEnd,
+            other
+        }
+    },
+    mounted(){
+        console.log(frontEnd,backEnd);
+    }
+}
+</script>
 
 <style scoped>
 .services .box-container{
@@ -106,7 +85,7 @@
 .services .box-container .box i{
     font-size:4rem;
     padding-bottom: 5rem;
-    color:#fff;
+    color:var(--black);
 }
 
 .services .box-container .box h3{
@@ -118,7 +97,8 @@
 .services .box-container .box li{
     font-size:1.4rem;
     line-height: 1.8;
-    color:var(--light-color);
+    color:var(--green);
+    list-style:none;
 }
 
 .services .box-container .box::before{
@@ -139,5 +119,8 @@
 
 .services .box-container .box:hover > *{
     color:#fff;
+}
+.services .box-container .box:hover ul li{
+    color: var(--black);
 }
 </style>

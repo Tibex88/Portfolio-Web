@@ -12,7 +12,7 @@
       <portfolio-section></portfolio-section>
       
       <contact-section></contact-section>
-      <footer-section></footer-section>
+      <!-- <footer-section></footer-section> -->
     </template>
     </theme-toggler>
 </template>
@@ -26,7 +26,7 @@ import ThemeToggler from './components/UI/ThemeToggler.vue'
 import SkillsSection from './components/skills/SkillsSection.vue'
 import PortfolioSection from './components/portfolio/PortfolioSection.vue'
 import ContactSection from './components/contact/ContactSection.vue'
-import FooterSection from './components/footer/FooterSection.vue'
+// import FooterSection from './components/footer/FooterSection.vue'
 import AboutSection from './components/about/AboutSection.vue'
 import HeroSection from './components/hero/HeroSection.vue'
 import NavigationSection from './components/nav/NavigationSection.vue'
@@ -51,7 +51,7 @@ export default {
     SkillsSection,
     PortfolioSection,
     ContactSection,
-    FooterSection,
+    // FooterSection,
     AboutSection,
     HeroSection,
     NavigationSection,
@@ -99,6 +99,15 @@ body{
     /* margin:(100%-24px) */
 }
 
+span.span{
+  color: var(--black);
+font-size: 1.6rem;
+}
+span.highlight{
+  color: var(--green);
+/* font-size: 1.3rem; */
+}
+
 p{
   font-size: 2rem;
   color: var(--light-color);
@@ -109,6 +118,7 @@ p{
 }
 a:link,a:active,a:visited{
   text-decoration: none;
+  color: var(--black);
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

@@ -22,30 +22,24 @@ export default {
 
 <style >
 
-.nav_bg{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    top:0%;
-    left:0%;
-    position: fixed;
-    background-color: var(--bg-color);
-}
 .nav_page{
     /* padding:0 2rem 0 2rem; */
     /* position: fixed; */
+    /* background-color: var(--bg-color); */
     /*
     justify-content: center;
     align-items: center; */
+    /* margin-bottom:12rem; */
+
 }
 
 
 @media (max-width: 795px) {
     .nav_bar{
         display:none;/*important */
-        /* position:fixed;
+        position:fixed;
+ 
+        /*
         flex-direction: row;
         gap:12rem;
         justify-content: center;
@@ -58,25 +52,20 @@ export default {
         display:none;
     }
     .nav_bar{
+        display:flex;
+        gap:3rem;
+        justify-content: center;
+        align-items: center;
+        margin-bottom:12rem
         /* position:sticky; */
-        
         /* when scrolled out of view */
         /* position: fixed; 
         transform:translateX(-50%);
         left:50%;
         bottom:2rem; */
-
         /* bottom: 3.5rem; */
         /* right: 2rem; */
-
-        display:flex;
         /* flex-direction: row; */
-        gap:3rem;
-        justify-content: center;
-        align-items: center; 
     }
-
-
-
 }
 </style>

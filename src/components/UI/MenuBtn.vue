@@ -1,6 +1,24 @@
 <template>
     
-    <div @click="log" id="menu-btn" class="fas fa-bars"></div>
+    <div @click="log" id="menu-btn" >
+      <div class="menu_container">
+        <a  :class="{active:pages.home}" href="#" @click="clicked('home')" >
+          <i class="fas fa-home"></i>
+        </a>
+        <a  :class="{active:pages.about}" href="#about" @click="clicked('about')" >
+        <i class="fas fa-question"></i>
+        </a>
+        <a  :class="{active:pages.skills}" href="#skills" @click="clicked('skills')" >
+        <i class="fas fa-toolbox"></i>
+</a>
+        <a  :class="{active:pages.portfolio}" href="#portfolio" @click="clicked('portfolio')" >
+        <i class="fas fa-folder-open"></i>
+</a>
+        <a  :class="{active:pages.contact}" href="#contact" @click="clicked('contact')" >
+        <i class="fas fa-address-book"></i>
+        </a>
+      </div>
+    </div>
 
 </template>
 
@@ -9,46 +27,52 @@
 export default{
     data(){
         return {
-            observer:null
+            observer:null,
+            pages:{
+              home:false,
+              about:false,
+              skills:false,
+              portfolio:false,
+              contact:false,
+            }
         }
     },
-    created() {
-    this.observer = new IntersectionObserver(
-      this.onElementObserved, 
-      {
-        root: this.$el,//add a querySelector()
-        threshold: 1.0,
-      }
-    );
-  },
-  mounted() {
-    this.observer.observe(this.$el);
-  },
   methods: {
-    onElementObserved(entries) {
-        entries.forEach(entry => {
-    if(entry.intersectionRatio!=0 ){
-        // entry.target
-        console.log(entry.target)
-    //   video.pause(); isPaused = true;
-    }
-    // else if(isPaused) {video.play(); isPaused=false}
-  });
-    }
+    clicked(val){
+      for (let page in this.pages){
+        // console.log(page)
+        if(page == val){
+          this.pages[page] = true
+        }
+        else  this.pages[page] = false
+      }},
   },
 }
 </script>
 
-<style>
+<style scoped>
+
+.active{
+  /* background-color:var() ; */
+  color:var(--green);
+  /* box-shadow: var(--box-shadow);} */
+}
+
+#menu-btn .menu_container{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  height:100%;
+}
 
 #menu-btn{
     position: fixed;
-    top:1.5rem; left: 2rem;
+    bottom:3.5rem; left: 50%;
+    transform:translate(-50%,-50%);
     z-index: 1000;
     height: 5rem;
-    width: 5rem;
+    width: 80%;
     line-height: 5rem;
-    border-radius: 50%;
     font-size: 2rem;
     cursor: pointer;
     box-shadow: var(--box-shadow);
@@ -58,8 +82,8 @@ export default{
     /* display: none; */
 }
 
-#menu-btn:hover{
+#menu-btn .menu_container i:hover{
     color:var(--green);
-    box-shadow: var(--box-shadow-inset);
+    /* box-shadow: var(--box-shadow-inset); */
 }
 </style>

@@ -5,11 +5,11 @@
         <base-button class="logo">T</base-button>
       </div>
       <div class="links">
-        <a class="btn" href="#">HOME</a>
-        <a class="btn" href="#skills">SKILLS</a>
-        <a class="btn" href="#portfolio">PORTFOLIO</a>
-        <a class="btn" href="#about">ABOUT</a>
-        <a class="btn" href="#contact">CONTACT</a>
+        <a class="btn" :class="{active:pages.home}" href="#" @click="clicked('home')" >HOME</a>
+        <a class="btn" :class="{active:pages.about}" href="#about" @click="clicked('about')" >ABOUT</a>
+        <a class="btn" :class="{active:pages.skills}" href="#skills" @click="clicked('skills')" >SKILLS</a>
+        <a class="btn"  :class="{active:pages.portfolio}" href="#portfolio" @click="clicked('portfolio')" >PORTFOLIO</a>
+        <a class="btn" :class="{active:pages.contact}" href="#contact" @click="clicked('contact')" >CONTACT</a>
       </div>
   </div>
   </nav>
@@ -19,13 +19,22 @@
 <script>
 import BaseButton from './BaseButton.vue';
 export default {
+  name:"HomePage",
   components: { BaseButton },
   data(){
         return {
-            observer:null
+          observer:null,
+          isActive:true,
+            pages:{
+              home:false,
+              about:false,
+              skills:false,
+              portfolio:false,
+              contact:false,
+            }
         }
     },
-    created() {
+  created() {
     this.observer = new IntersectionObserver(
       this.onElementObserved, 
       {
@@ -38,18 +47,27 @@ export default {
     this.observer.observe(this.$el);
   },
   methods: {
+    clicked(val){
+      for (let page in this.pages){
+        // console.log(page)
+        if(page == val){
+          this.pages[page] = true
+        }
+        else  this.pages[page] = false
+      }
+    },
     onElementObserved(entries) {
         entries.forEach(entry => {
     if(entry.intersectionRatio==1 ){ 
         // entry.target
         console.log(entry.target)
-        entry.target.style.visibility = "VISIBLE"
+        // entry.target.style.visibility = "VISIBLE"
         // entry.target.classList.toggle("nav_bar_2")
         // entry.target.classList.toggle("nav_bar")
         //   video.pause(); isPaused = true;
       }
       else{
-        entry.target.style.visibility = "hidden"
+        // entry.target.style.visibility = "hidden"
         // entry.target.classList.toggle("nav_bar_2")
         // entry.target.classList.toggle("nav_bar")
     }
@@ -62,15 +80,33 @@ export default {
 
 <style scoped>
 
+
+.nav_bg{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    top:0;
+    left:0%;
+    position:fixed;
+    background-color: var(--bg-color);
+    z-index:1000;
+}
+
 .logo{
   /* border-radius: 50%; */
 }
+.box .links .active, .btn:hover, a:active{
+  background-color:var(--green) ;
+  color:var(--bg-color);
+  box-shadow: var(--box-shadow);}
 
 .btn{
   padding: 1rem 1.5rem;
 }
 .links{
+  display: flex;
 	gap: 2rem;
-	display: flex;
 }
 </style>

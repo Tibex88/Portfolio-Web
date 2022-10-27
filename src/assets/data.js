@@ -1,7 +1,7 @@
 exports.portfolio = [{
         title: 'Crowning Story',
         description: 'A bot to assist with a channel of the same name, converts reddit links to instant view telegram webpages',
-        techStack: ['NodeJS', 'grammyjs'],
+        techStack: ['NodeJS', 'Grammyjs'],
         repo: 'https://github.com/Tibex88/TGBot',
         link: 'https://t.me/crowningstory',
         demo: null,
@@ -14,10 +14,10 @@ exports.portfolio = [{
         repo: 'https://github.com/ROCK-LIBRARY/ARL',
         link: null,
         demo: null,
-        img: require('@/assets/image/screenshots/arl_logo_white.png'),
+        img: require('@/assets/image/screenshots/arl.png'),
     },
     {
-        title: 'Easybank-landing-page-code',
+        title: 'Easybank landing page',
         description: 'A landing page for Easybank',
         techStack: ['Sass', 'HTML', 'JAVASCRIPT'],
         repo: 'https://github.com/Tibex88/Easybank-landing-page-code-challenge',
@@ -30,7 +30,7 @@ exports.portfolio = [{
         description: 'A simple landing page for Ahmenes Space Society',
         techStack: ['HTML', 'CSS', 'JS'],
         repo: 'https://github.com/Tibex88/Space_Society_Landing_Page',
-        link: 'https://app.netlify.com/sites/classy-mochi-0f3ac7',
+        link: 'https://classy-mochi-0f3ac7.netlify.app/',
         demo: null,
         img: require('@/assets/image/screenshots/ahmenes.png'),
     },
@@ -41,6 +41,37 @@ exports.portfolio = [{
         repo: null,
         link: 'https://633d39d97fb3a.site123.me/team',
         demo: null,
-        img: require('@/assets/image/screenshots/ahmenes.png'),
+        img: require('@/assets/image/screenshots/ahmenes2.png'),
     },
+]
+
+exports.frontEnd = ['VueJS', 'TailWind', 'JavaScript', 'SaSS', 'HTML', 'CSS']
+exports.backEnd = ['NodeJS', 'PHP', 'EXPRESS', 'MongoDB', 'MySQL', 'Heroku', 'Netlify']
+exports.other = ['AdobeXD', 'Photoshop']
+exports.socials = [{
+        num: 1,
+        link: "https://github.com/Tibex88/",
+        icon: "fab fa-github"
+    },
+    {
+        num: 2,
+        link: 'https://t.me/tibe_sz',
+        icon: "fab fa-telegram-plane"
+    },
+    {
+        num: 3,
+        link: '5',
+        icon: "fab fa-instagram"
+    },
+    {
+        num: 4,
+        link: '5',
+        icon: "fab fa-twitter"
+    },
+    {
+        num: 5,
+        link: 'tibesolomon7@gmail.com',
+        icon: "fab fa-google"
+    },
+
 ]

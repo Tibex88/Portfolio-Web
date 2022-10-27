@@ -7,39 +7,12 @@
             <img :src="project.img" alt="">
             <div class="content">
                 <h3>{{project.title}}</h3>
-                <span>{{project.description}}</span><br>
-                <span>{{project.techStack.toString()}}</span>
+                <span class="highlight">{{project.description}}</span><br>
+                <span class="span">{{project.techStack.toString()}}</span>
                 <a v-show="project.repo" :href="project.repo"><i class="fab fa-github"></i></a>
                 <a v-show="project.link" :href="project.link" ><i class="fas fa-link"></i></a>
             </div>
         </div>
-        
-        <!-- <div class="box">
-            <img :src="portfolio[0].img" alt="">
-            <div class="content">
-                <h3>Crowning Stories bot</h3>
-                <a v-show="portfolio[0].repo" :href="portfolio[0].repo"><i class="fab fa-github"></i></a>
-                <a v-show="portfolio[0].link" :href="portfolio[0].link" ><i class="fas fa-link"></i></a>
-            </div>
-        </div>
-        
-        <div class="box">
-            <img :src="portfolio[0].img" alt="">
-            <div class="content">
-                <h3>Crowning Stories bot</h3>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fas fa-link"></i></a>
-            </div>
-        </div>
-        
-        <div class="box">
-            <img :src="portfolio[0].img" alt="">
-            <div class="content">
-                <h3>Crowning Stories bot</h3>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fas fa-link"></i></a>
-            </div>
-        </div> -->
 
     </div>
 </div>
@@ -54,9 +27,6 @@ export default{
         return{
             portfolio,
         }
-    },
-    mounted(){
-        console.log({portfolio});
     },
 }
 </script>
@@ -76,9 +46,17 @@ export default{
     height: 25rem;
     border-radius: .5rem;
     overflow:hidden;
-    box-shadow: var(--box-shadow);
+    /* box-shadow: var(--box-shadow); */
+    box-shadow: var(--box-shadow-inset);
     position: relative;
     border:1rem solid transparent;
+    transition:all 5000s ease-out;
+}
+
+
+.portfolio .box-container .box:hover{
+    box-shadow: var(--box-shadow);
+    transition:all 5s;
 }
 
 .portfolio .box-container .box img{
@@ -100,6 +78,9 @@ export default{
 
 .portfolio .box-container .box:hover .content{
     transform: scale(1);
+    /* box-shadow: var(--box-shadow);
+    transition:all 5s; */
+        /* box-shadow: var(--box-shadow); */
 }
 
 .portfolio .box-container .box .content h3{
