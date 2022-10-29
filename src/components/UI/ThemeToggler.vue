@@ -1,9 +1,9 @@
 <template>
-  <div :class="darkMode ? 'dark' : 'light'" class="window">
+  <div :class="dark ? 'dark' : 'light'" class="window">
     <div
       id="theme-toggler"
       @click="toggleTheme"
-      :class="darkMode ? 'fas fa-sun' : 'fas fa-moon'"
+      :class="dark ? 'fas fa-sun' : 'fas fa-moon'"
     ></div>
     <slot name="body"> </slot>
   </div>
@@ -15,7 +15,7 @@ export default {
   inject: ["darkMode"],
   data() {
     return {
-      // darkMode: this.darkMode,
+      dark: this.darkMode,
     };
   },
   computed: {},
