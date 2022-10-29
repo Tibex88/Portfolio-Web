@@ -18,17 +18,17 @@
   </div>
 
   <!-- <a class="btn cv">Download CV</a> -->
-  <base-button class="btn cv" type="button">Download CV</base-button>
+  <a class="btn cv" href="/resume/resume.pdf" type="button">Download CV</a>
   <!-- <logo></logo> -->
 </template>
 
 <script>
-import BaseButton from "../UI/BaseButton.vue";
+// import BaseButton from "../UI/BaseButton.vue";
 import { socials } from "@/assets/data";
 
 export default {
   components: {
-    BaseButton,
+    // BaseButton,
   },
   data() {
     return {
