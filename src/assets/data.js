@@ -9,7 +9,7 @@ exports.portfolio = [{
     },
     {
         title: 'AASTU Rock library',
-        description: 'A full-stack web-app for native rocks/minerals in Ethiopia',
+        description: 'A full-stack web-app for native \n minerals in Ethiopia',
         techStack: ['NodeJS', 'Vue', 'Tailwind', 'MongoDB', 'Express'],
         repo: 'https://github.com/ROCK-LIBRARY/ARL',
         link: null,

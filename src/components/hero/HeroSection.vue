@@ -101,28 +101,47 @@ export default {
   transition: 3s all;
   transform: perspective(900px);
 }
+
+@media (min-width: 600px) {
+  .skill-orbit:nth-child(1) {
+    animation: rotate1 5s infinite linear;
+  }
+  .skill-orbit:nth-child(2) {
+    animation: rotate2 5s infinite linear;
+  }
+  .skill-orbit:nth-child(3) {
+    animation: rotate3 5s infinite linear;
+  }
+  .skill-orbit:nth-child(4) {
+    animation: rotate4 5s infinite linear;
+  }
+  .skill-orbit:nth-child(5) {
+    animation: rotate5 5s infinite linear;
+  }
+}
+
 .skill-orbit:nth-child(1) {
-  animation: rotate1 5s infinite linear;
+  /* animation: rotate1 5s infinite linear; */
   width: 100%;
   height: 100%;
 }
 .skill-orbit:nth-child(2) {
-  animation: rotate2 5s infinite linear;
+  /* animation: rotate2 5s infinite linear; */
   width: 82.5%;
   height: 82.5%;
 }
 .skill-orbit:nth-child(3) {
-  animation: rotate3 5s infinite linear;
+  /* animation: rotate3 5s infinite linear; */
   width: 65%;
   height: 65%;
 }
 .skill-orbit:nth-child(4) {
-  animation: rotate4 5s infinite linear;
+  /* animation: rotate4 5s infinite linear; */
   width: 47.5%;
   height: 47.5%;
 }
 .skill-orbit:nth-child(5) {
-  animation: rotate5 5s infinite linear;
+  /* animation: rotate5 5s infinite linear; */
   width: 30%;
   height: 30%;
 }

@@ -56,6 +56,7 @@ export default {
 }
 .window {
   min-height: 100vh;
+  overflow-x: hidden;
   /* padding:2rem; */
 }
 

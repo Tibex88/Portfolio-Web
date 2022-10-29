@@ -37,7 +37,7 @@ export default {
   },
   data() {
     return {
-      darkMode: false,
+      darkMode: true,
     };
   },
   components: {
@@ -74,13 +74,15 @@ export default {
 }
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "Rokkitt ";
+  /* <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">  */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
+  white-space: initial;
   /* text-transform: capitalize; */
   transition: 0.2s linear;
 }
@@ -122,7 +124,7 @@ a:visited {
   color: var(--black);
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
