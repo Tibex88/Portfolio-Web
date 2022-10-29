@@ -12,10 +12,10 @@
 
 <script>
 export default {
-  inject: ["darkMode"],
+  props: ["modelValue"],
   data() {
     return {
-      darkMode: this.darkMode,
+      darkMode: this.modelValue,
     };
   },
   computed: {},

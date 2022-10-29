@@ -2,7 +2,7 @@
   <!-- <base-button></base-button>
   <base-card></base-card>
   <base-input></base-input> -->
-  <theme-toggler>
+  <theme-toggler v-model="darkMode">
     <template #body>
       <navigation-section></navigation-section>
       <hero-section></hero-section>
@@ -32,9 +32,9 @@ import NavigationSection from "./components/nav/NavigationSection.vue";
 
 export default {
   name: "App",
-  provide() {
-    return { darkMode: this.darkMode };
-  },
+  // provide() {
+  //   return { darkMode: this.darkMode };
+  // },
   data() {
     return {
       darkMode: false,
