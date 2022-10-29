@@ -60,17 +60,17 @@ exports.socials = [{
     },
     {
         num: 3,
-        link: '5',
+        link: 'https://www.instagram.com/tibex6',
         icon: "fab fa-instagram"
     },
     {
         num: 4,
-        link: '5',
+        link: 'https://twitter.com/TibeSolomon',
         icon: "fab fa-twitter"
     },
     {
         num: 5,
-        link: 'tibesolomon7@gmail.com',
+        link: 'mailto:tibesolomon7@gmail.com',
         icon: "fab fa-google"
     },
 
