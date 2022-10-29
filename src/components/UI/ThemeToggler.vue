@@ -2,7 +2,7 @@
   <div :class="dark ? 'dark' : 'light'" class="window">
     <div
       id="theme-toggler"
-      @click="toggleTheme"
+      @click="toggleTheme()"
       :class="dark ? 'fas fa-sun' : 'fas fa-moon'"
     ></div>
     <slot name="body"> </slot>
@@ -27,6 +27,7 @@ export default {
   },
 };
 </script>
+
 <style>
 #theme-toggler {
   position: fixed;
