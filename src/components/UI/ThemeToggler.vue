@@ -15,7 +15,7 @@ export default {
   inject: ["darkMode"],
   data() {
     return {
-      darkMode: this.darkMode,
+      // darkMode: this.darkMode,
     };
   },
   computed: {},
