@@ -106,7 +106,7 @@ span.span {
 }
 span.highlight {
   color: var(--green);
-  /* font-size: 1.3rem; */
+  font-size: 2rem;
 }
 
 p {
