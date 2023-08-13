@@ -18,7 +18,7 @@
   </div>
 
   <!-- <a class="btn cv">Download CV</a> -->
-  <a class="btn cv" href="/resume/resume.pdf" type="button">Download Resume</a>
+  <a class="btn cv" href="/resume/Tibebe Solomon Resume.pdf" type="button">Download Resume</a>
   <!-- <logo></logo> -->
 </template>
 
